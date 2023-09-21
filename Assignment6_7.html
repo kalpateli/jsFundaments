@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 6&7</title>
+
+        <style>
+            #div1{
+                background-color: red;
+                height: 100px;
+                color:white;
+            }
+        </style>
+    </head>
+    <body onkeypress="colorChange()">
+        <h1>Product Details</h1>
+        <div id="div1">
+            <marquee onmousedown="stop()" onmouseup="start()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Veritatis voluptates nemo nam, culpa qui ea saepe ratione nobis magni ipsum.
+                 Odit iure expedita ipsa quod tenetur ex deleniti sint non!</marquee>
+        </div>
+        <div id="div2">
+            <input type="text" id="fname" onkeydown="change()" onkeyup="changeBack()">
+        </div>
+ 
+    
+        <script>
+          
+            function change()
+            {
+                let fname = document.getElementById("fname");
+                fname.style.backgroundColor="yellow";
+            }
+
+            function changeBack()
+            {
+                let fname = document.getElementById("fname");
+                fname.style.backgroundColor="blue";
+            }
+
+            function colorChange()
+            {
+               
+                document.body.style.backgroundColor="beige";
+            }
+           
+        </script>
+    </body>
+</html>

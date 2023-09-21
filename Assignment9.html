@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 9</title>
+    </head>
+    <body>
+        <form name="myForm">
+            <label>Email : </label>
+            <input type="email" name="email">
+            <br><br>
+            <label>Password : </label>
+            <input type="password" name="password"  >
+            <br><br>
+            <label>Contact : </label>
+            <input type="text" name="contact">
+            <br><br>
+            <button type="button" onclick="validate()" >Submit</button>
+
+        </form>
+
+        <script>
+            function validate(){
+                let email = document.myForm.email.value;
+                let pass = document.myForm.password.value;
+                let contact = document.myForm.contact.value;
+
+                let e = /^([a-zA-Z0-9_\.\-])+@([a-zA-Z0-9\.\-])+\.([a-zA-Z]{2,4})$/;
+                let p = /^[a-zA-Z0-9_\.\!]{5,8}$/;
+                let c = /^[7-9]{1}[0-9]{9}$/;
+
+                if(email == "" || !(e.test(email)))
+                {
+                    alert("Enter a valid Email");
+                    document.myForm.email.focus();
+                }
+                else if(pass == "" || !(p.test(pass)))
+                {
+                    alert("Enter a valid Password");
+                    document.myForm.password.focus();
+                }
+                else if(contact == "" || !(c.test(contact)))
+                {
+                    alert("Enter a valid contact");
+                    document.myForm.contact.focus();
+
+                }
+                else
+                {
+                    alert(email +"  " + pass +"  " + contact);
+                }
+            }
+           
+        </script>
+    </body>
+</html>

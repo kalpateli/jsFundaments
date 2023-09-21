@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 9</title>
+    </head>
+    <body>
+        <h1>Product Details</h1>
+        <div id="product">
+            <p id="laptop"> Laptop - 1000$</p>
+            <p id="Cellphone">Cell phone - 300$</p>
+ 
+        </div>
+ 
+        <button type="button" value="create" onclick="addProduct()">Add</button>
+        <button type="button" value="remove" onclick="deleteProduct()">Delete</button>
+
+        <script>
+          
+            function addProduct()
+            {
+                let products = document.getElementById("product");
+
+                let tv =document.createElement("p")
+                let text = document.createTextNode("TV - 3000$")
+                tv.appendChild(text);
+                products.appendChild(tv);
+            }
+
+            function deleteProduct()
+            {
+                let products = document.getElementById("product");
+                let cell = document.getElementById("Cellphone");
+                products.removeChild(cell);
+            }
+           
+        </script>
+    </body>
+</html>
